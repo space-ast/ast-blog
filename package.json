@@ -1,0 +1,25 @@
+{
+  "name": "ast-blog",
+  "description": "a blog for astronomy and astrodynamics",
+  "version": "2.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run docs:dev",
+    "build": "npm run docs:build",
+    "docs:build": "vuepress-vite build .",
+    "docs:clean-dev": "vuepress-vite dev . --clean-cache",
+    "docs:dev": "vuepress-vite dev .",
+    "docs:update-package": "npx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.26",
+    "sass-embedded": "^1.97.1",
+    "vue": "^3.5.26",
+    "vuepress": "2.0.0-rc.26",
+    "vuepress-theme-hope": "2.0.0-rc.102"
+  },
+  "dependencies": {
+    "@mathjax/src": "^4.1.0"
+  }
+}
