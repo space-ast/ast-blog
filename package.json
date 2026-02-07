@@ -20,6 +20,7 @@
     "vuepress-theme-hope": "2.0.0-rc.102"
   },
   "dependencies": {
-    "@mathjax/src": "^4.1.0"
+    "@mathjax/src": "^4.1.0",
+    "sass": "^1.97.3"
   }
 }
