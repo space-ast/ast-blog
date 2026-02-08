@@ -1,4 +1,4 @@
-import{_ as e}from"./plugin-vue_export-helper-DlAUqK2U.js";import{c as t,a as o,o as a}from"./app-EkTYBMZd.js";const n={};function r(m,p){return a(),t("div",null,[o(` 
+import{_ as e}from"./plugin-vue_export-helper-DlAUqK2U.js";import{c as t,a as o,o as a}from"./app-CeMFwhNL.js";const n={};function r(m,p){return a(),t("div",null,[o(` 
 这是一个博客主页的案例。
 
 要使用此布局，你应该在页面前端设置 \`layout: Blog\` 和 \`home: true\`。
