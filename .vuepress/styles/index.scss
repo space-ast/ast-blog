@@ -1,1 +1,348 @@
-// place your custom styles here
+:root {
+  --side-bar-bg-color: var(--vp-c-bg);
+  /* List Marker */
+  --source-color: #a8a8a9;
+  /* for comment / link source */
+  --highlight-color: #ffffb5c2;
+  /* Highlight */
+  --header-span-color: var(--yy-primary-color);
+
+  /* h2 Span Color */
+  --block-bg-color: #f6f8fa;
+
+  /* Block Background */
+  --img-shadow-color: #e3e8f0;
+
+  /* Overwrite of Typora Base Color */
+  --search-hit-bg-color: var(--select-text-bg-color);
+  --search-select-bg-color: #5bb3ff;
+  --control-text-hover-color: #a2b6d4;
+  --rawblock-edit-panel-bd: var(--block-bg-color);
+  --item-hover-bg-color: rgb(246 248 250);
+  --active-file-bg-color: var(--block-bg-color);
+
+  --code-c-highlight-bg:#dbe3ee;
+  --code-c-line-number: #4870ac;
+}
+
+// @font-face {
+//   font-family: "Cantarell";
+//   src: url('/Cantarell-VF-fixed.otf');
+// }
+
+// @font-face {
+//   font-family: "JetBrainsMono";
+//   src: url('/JetBrainsMono-Regular.ttf');
+// }
+
+// @font-face {
+//   font-family: "SourceHanSerifCN";
+//   src: url('/assets/fonts/SourceHanSerifCN-Medium.ttf');
+//   font-weight: normal;
+// }
+
+// @font-face {
+//   font-family: "SourceHanSerifCN";
+//   src: url('/assets/fonts/SourceHanSerifCN-Bold.ttf');
+//   font-weight: bold;
+// }
+
+/*
+ * Basic Style
+ */
+#main-content {
+  line-height: 2;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: justify;
+  margin-bottom: 20rem;
+}
+
+/*
+ * Strong
+ */
+#main-content strong {
+  color: var(--yy-primary-color);
+}
+
+/*
+ * link
+ */
+#main-content a {
+  color: var(--yy-primary-color);
+}
+
+/* mark */
+mark {
+  background: var(--highlight-color);
+  padding: 1px .15rem;
+  border-radius: 1px;
+  color: inherit;
+}
+
+/* 
+ * Paragraph
+ */
+#main-content+p,
+#main-content blockquote p {
+  // font-size: 1.1rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  margin: 0;
+  line-height: 2;
+  color: var(--yy-text-color);
+}
+
+/*
+ * Header
+ */
+/* 统一使用 [vp-content] 选择器 */
+[vp-content]:not(.custom) #markdown-content>h1,
+[vp-content]:not(.custom) #markdown-content>h2,
+[vp-content]:not(.custom) #markdown-content>h3,
+[vp-content]:not(.custom) #markdown-content>h4,
+[vp-content]:not(.custom) #markdown-content>h5,
+[vp-content]:not(.custom) #markdown-content>h6 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#main-content h4,
+#main-content h5,
+#main-content h6 {
+  font-weight: normal;
+}
+
+#main-content h1,
+#main-content h2,
+#main-content h3,
+#main-content h4,
+#main-content h5,
+#main-content h6 {
+  // font-family: 'SourceHanSerifCN';
+  padding: 0px;
+  color: var(--yy-primary-color);
+}
+
+#main-content h1 {
+  text-align: center;
+}
+
+#main-content h2 {
+  padding: 6px 16px !important;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+#main-content h2,
+#main-content h2 code {
+  background-color: var(--header-span-color);
+}
+
+#main-content h2,
+#main-content h2 a,
+#main-content h2 code,
+#main-content h2 strong,
+#main-content h2 script {
+  color: var(--vp-c-bg);
+}
+
+#main-content h2 a {
+  border-bottom-color: var(--vp-c-bg) !important;
+}
+
+#main-content h1 {
+  font-size: 2rem;
+}
+
+#main-content h2 {
+  font-size: 1.5rem;
+}
+
+#main-content h3 {
+  font-size: 1.4rem;
+}
+
+#main-content h4 {
+  font-size: 1.2rem;
+}
+
+#main-content h5 {
+  font-size: 1.1rem;
+}
+
+#main-content h6 {
+  font-size: 1.1rem;
+}
+
+#main-content h1 {
+  padding-top: 0.9rem;
+  margin-bottom: 2.3rem !important;
+}
+
+#main-content h2 {
+  margin: .3em 0 !important;
+}
+
+#main-content h3 {
+  margin: 1em 0 1em !important;
+}
+
+#main-content h4 {
+  margin: 0.8em 0 0.8em !important;
+}
+
+#main-content h5 {
+  margin: 0.6em 0 0.6em !important;
+}
+
+#main-content h6 {
+  margin: 0.4em 0 0.4em !important;
+}
+
+/*
+ * Quote 引用
+ */
+#main-content blockquote {
+  display: block;
+  font-size: .9em;
+  overflow: auto;
+  padding: 15px 30px 15px 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: var(--yy-c-bg-blockquote);
+  border-left: 6px solid var(--yy-c-bl-blockquote);
+}
+
+// .md-alert {
+//   display: block;
+//   overflow: auto;
+//   border-left: 3px solid var(--yy-primary-color);
+//   padding: 15px 30px 15px 20px;
+//   margin-bottom: 20px;
+//   margin-top: 20px;
+//   background: var(--block-bg-color);
+// }
+
+// .md-alert-text-container {
+//   font-size: 1.2em;
+// }
+
+// .md-alert-text-important {
+//   color: #614f9c;
+// }
+
+// .md-alert.md-alert-important {
+//   background-color: #614f9c0a;
+//   border-left-color: #614f9c;
+// }
+
+// .md-alert-text-note {
+//   color: #527da8;
+// }
+
+// .md-alert.md-alert-note {
+//   background-color: #527da80a;
+//   border-left-color: #527da8;
+// }
+
+// .md-alert-text-tip {
+//   color: #428485;
+// }
+
+// .md-alert.md-alert-tip {
+//   background-color: #4284850a;
+//   border-left-color: #428485;
+// }
+
+// .md-alert-text-warning {
+//   color: #a88652;
+// }
+
+// .md-alert.md-alert-warning {
+//   background-color: #9b80490a;
+//   border-left-color: #a88652;
+// }
+
+
+// .md-alert-text-caution {
+//   color: #a34f55;
+// }
+
+// .md-alert.md-alert-caution {
+//   background-color: #a34f550a;
+//   border-left-color: #a34f55;
+// }
+
+/*
+ * Inline code
+ */
+#main-content code {
+  font-weight: normal;
+  word-wrap: break-word;
+  border-radius: 3px;
+  // font-family: 'JetBrainsMono';
+  word-break: break-all;
+}
+
+/*
+ * Img
+ */
+
+#main-content img {
+  margin: 0 auto;
+  max-width: 100%;
+  // filter: drop-shadow(var(--img-shadow-color) 0px 6px 6px);
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+}
+/*
+ * List
+ */
+
+::marker {
+    font-weight: bold;
+    color: var(--yy-marker-color);
+}
+
+li.md-list-item {
+    margin: 0.4rem 0;
+}
+
+#main-content ul,
+#main-content ol {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+}
+
+#main-content ul {
+    list-style-type: disc;
+}
+
+#main-content em {
+    padding: 0 3px 0 0;
+}
+
+#main-content ul ul {
+    list-style-type: square;
+}
+
+#main-content ol {
+    list-style-type: decimal;
+}
+
+#main-content li section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 2;
+    text-align: justify;
+    color: var(--yy-text-color);
+    font-weight: 500;
+}
+p,ul,ol {
+  line-height: 1.8;
+}

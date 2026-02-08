@@ -1,2 +1,17 @@
-// you can change config here
-$theme-color: #096dd9;
+// 主题色，支持多个主题色甚至指定 light/dark 颜色
+$theme-color: (
+  light: #4870ac,
+  dark: #8393ad
+);
+
+// 代码块的背景颜色
+$code-bg-color: (
+  light: #f6f8fa,
+  dark: #080e1d,
+);
+
+// 代码字体颜色
+$code-color:(
+  light: #4870ac,
+  dark: #8393ad
+)

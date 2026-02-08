@@ -1,1 +1,41 @@
-// you can change colors here
+// 默认文本颜色
+$vp-c-text: (
+  light: #40464f,
+  dark: #e4e4e4e3,
+);
+// 整体背景颜色
+$vp-c-bg: (
+  light: #ffffff,
+  dark: #1e222a,
+);
+// 行内代码颜色
+$vp-c-grey-soft: red;
+// 引用背景颜色
+$yy-c-bg-blockquote:(
+  light: #f6f8fa,
+  dark: #2a2f3b,
+);
+// 引用边框颜色
+$yy-c-bl-blockquote:(
+  light: #4870ac,
+  dark: #8393ad,
+);
+// 静音文本的颜色，例如“非活动菜单”或“信息文本”
+// 例如引用中的列表
+$vp-c-text-mute:(
+  light: #40464f,
+  dark: #e4e4e4e3,
+);
+$yy-text-color:(
+  light: #40464f,
+  dark: #e4e4e4e3,
+);
+// Text Color
+$yy-primary-color:( 
+  light: #4870ac,
+  dark: #8393ad,
+);
+$yy-marker-color:(
+  light: #a2b6d4,
+  dark: #7d8a9f,
+)
