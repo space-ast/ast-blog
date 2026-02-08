@@ -169,12 +169,19 @@ export default hopeTheme({
   plugins: {
     blog: true,
 
-    // 启用之前需安装 @waline/client
-    // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
-    // comment: {
-    //   provider: "Waline",
-    //   serverURL: "https://waline-comment.vuejs.press",
-    // },
+    // 评论
+    comment: {
+      provider: "Giscus",
+      repo: "space-ast/ast-blog",
+      repoId: "R_kgDORJ3wFA",
+      category: "Announcements",
+      categoryId: "DIC_kwDORJ3wFM4C2B34",
+    },
+
+    // 搜索
+    slimsearch:{
+      indexContent: true,
+    },
 
     components: {
       components: ["Badge", "VPCard"],
