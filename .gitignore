@@ -4,3 +4,5 @@ node_modules/
 .vuepress/.temp/
 .vuepress/dist/
 kernels/
+thirdparty/
+*.zip
