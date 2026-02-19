@@ -3,7 +3,7 @@ home: true
 layout: Blog
 icon: house
 title: 主页
-heroImage: /logo.png
+heroImage: /logoHome.png
 bgImage: /bgImageLight.png
 bgImageDark: /bgImageDark.png
 heroText: ast-blog

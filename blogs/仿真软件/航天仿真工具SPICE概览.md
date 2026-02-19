@@ -26,18 +26,18 @@ SPICE工具由多个内核模块组成，每种内核模块提供相应的内核
 SPICE的内核数据文件通常以`.bsp`、`.bpc`、`.tpc`、`.tf`、`.tls`等扩展名结尾，内核数据文件是SPICE工具运行的数据基础，需要用户下载并加载到SPICE环境中，具体包括以下几类：
 
 
-| 内核 | 全称                         | 核心用途                               | 数据来源           | 备注                       |
-|-----|---------------------------  |----------------------------------------|--------------------|----------------------------|
-| SPK | Spacecraft and Planet Kernel| 天体/航天器位置速度（星历）               | 天文星历（如DE430） |                            |
-| PCK | Planetary Constants Kernel  | 天体的物理参数：质量、形状、自转、重力场等 |  IAU等科学组织      | 文本型(.tpc)、二进制型(.bpc) |
-| IK  | Instrument Kernel           | 仪器视场几何参数（形状、尺寸、指向）       |  仪器制造商        |                             |
-| CK  | C-Matrix Kernel             | 航天器/部件姿态（四元数/矩阵）            |  姿态控制系统      | 按时间连续或离散存储         |
-| EK  | Events Kernel               | 任务事件：ESP(计划)、ESQ(指令)、ENB(日志) |                  | 使用较少                      |
-| FK  | Frame Kernel                | 参考系定义及转换关系（固定/动态）         |  任务设计团队      |                                |
-| LSK | Leapseconds Kernel          | 闰秒表，用于UTC ↔ TDB/ET转换             |  IERS            | 扩展名.tls                       |
-| SCLK| Spacecraft Clock Kernel     | 航天器时钟与ET的转换系数                 |  工程遥测         | 扩展名.tsc                       |
-| DSK | Digital Shape Kernel        | 数字形状模型（曲面细分、数字高程模型）     |  科学团队         | 扩展名.bds, 开发中               |
-| MK  | Meta Kernel                 | 元内核，列出需加载的内核集合（文本文件）   |  用户自建         | 便于批量加载                     |
+| 内核 | 全称                         | 核心用途                               | 备注                       |
+|-----|---------------------------  |----------------------------------------|----------------------------|
+| SPK | Spacecraft and Planet Kernel| 天体/航天器位置速度（星历）               | 天文星历（如DE430） |
+| PCK | Planetary Constants Kernel  | 天体的物理参数：质量、形状、自转、重力场等 | 来自IAU等科学组织<br>文本型(.tpc)<br>二进制型(.bpc) |
+| IK  | Instrument Kernel           | 仪器视场几何参数（形状、尺寸、指向）       | 来自仪器制造商 |
+| CK  | C-Matrix Kernel             | 航天器/部件姿态（四元数/矩阵）            | 按时间连续或离散存储         |
+| EK  | Events Kernel               | 任务事件：ESP(计划)、ESQ(指令)、ENB(日志) | 使用较少                      |
+| FK  | Frame Kernel                | 参考系定义及转换关系（固定/动态）         | 来自任务设计团队 |
+| LSK | Leapseconds Kernel          | 闰秒表，用于UTC ↔ TDB/ET转换             | 来自IERS<br/>扩展名.tls            |
+| SCLK| Spacecraft Clock Kernel     | 航天器时钟与ET的转换系数                 | 来自工程遥测<br/>扩展名.tsc            |
+| DSK | Digital Shape Kernel        | 数字形状模型（曲面细分、数字高程模型）     | 来自科学团队<br/>扩展名.bds<br/>开发中 |
+| MK  | Meta Kernel                 | 元内核，列出需加载的内核集合（文本文件）   | 用户自建<br/>便于批量加载            |
 
 > 注：内核文件格式跨平台可移植，且支持**选择性加载**
 
@@ -319,4 +319,3 @@ SPICE库是NASA开发的一个重要工具，为科学家和工程师提供了�
 - [SpiceyPy文档](https://spiceypy.readthedocs.io/)
 - [SPICE内核文件](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/)
 - [SPICE概览](https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf)
-

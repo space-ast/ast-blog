@@ -11,7 +11,8 @@ export default hopeTheme({
     url: "https://space-ast.github.io/ast",
   },
 
-  logo: "logo.png",
+  logo: "logoLight.png",
+  logoDark: "logoDark.png",
 
   repo: "space-ast/ast-blog",
 
